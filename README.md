@@ -20,7 +20,7 @@ Výstupem by měla být tabulka výsledků a histogram distribuce počtu rotovat
 Úkol 2: Hledání konformerů programem crest
 ------------------------------------------
 
-Vyberete jednu sérii ligandů ve které jsou největší rozdíly počtu rotovatelných vazeb. Na těchto ligandech proveďte hledání konformerů programem [crest](https://crest-lab.github.io/crest-docs/). Program je pro linux, na windows jde použít WSL nebo virtuální stroj s linuxem.
+Vyberete jednu sérii ligandů ve které jsou největší rozdíly počtu rotovatelných vazeb. Na těchto ligandech proveďte hledání konformerů programem [crest](https://crest-lab.github.io/crest-docs/). Program je pro linux, na windows jde použít WSL2 nebo virtuální stroj s linuxem.
 
 Příklad k hledání konformerů je [zde](https://crest-lab.github.io/crest-docs/page/examples/example_1.html). Až zprovozníte program a vyzkoušíte tento příklad, konzultujte nastavení programu pro další výpočty.
 
