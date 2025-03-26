@@ -6,7 +6,7 @@ Vstupní data
 
 Pracujeme s ligandy z protein-ligand komplexů z [PL-REX datasetu](https://doi.org/10.1038/s41467-024-45431-8). 3D struktury molekul ve formátu SDF jsou k dispozici v adresáři `ligands`.
 
-V datasetu jsou samostatné série ligandů pro deset cílových proteinů. První část jména souboru je číslo série a zkratka názvu cílového proteinu, např. "001-CA2". Druhá část je označení samotného ligandu (např. 5NXG, což je PDB kód struktury ze keteré byl ligand získán).
+V datasetu jsou samostatné série ligandů pro deset cílových proteinů. První část jména souboru je číslo série a zkratka názvu cílového proteinu, např. "001-CA2". Druhá část je označení samotného ligandu (např. 5NXG, což je PDB kód struktury ze které byl ligand získán).
 
 
 Úkol 1: Odhad pomocí počtu rotovatelných vazeb
