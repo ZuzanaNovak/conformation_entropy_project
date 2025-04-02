@@ -20,7 +20,7 @@ for filename in os.listdir(ligand_folder):
                     target_protein, ligand_pdb = name.split("__", 1)
                 else:
                     target_protein = name
-                    ligand_pdb = "unknown"
+                    ligand_pdb = "none"
 
                 rotatable_bonds.append({
                     "target_protein": target_protein,
@@ -29,6 +29,8 @@ for filename in os.listdir(ligand_folder):
                 })
             else:
                 print(f"{filename} error with this molecule")
+    else:
+        print(f"{filename} is not SDF")
 #saving results
 rotatable_bonds_df = pd.DataFrame(rotatable_bonds)
 rotatable_bonds_df = rotatable_bonds_df.sort_values(by=["target_protein", "ligand_pdb"])
@@ -47,5 +49,5 @@ plt.ylabel("Count")
 plt.xticks(range(rotatable_bonds_df["rotatable_bonds"].max()+1))
 plt.grid(axis='y', linestyle='-', alpha=0.7)
 plt.tight_layout()
-plt.savefig("results/rotatable_bonds_distribution.png", dpi =300)
+plt.savefig("results/rotatable_bonds_distribution_hist.png", dpi =300)
 plt.show()
