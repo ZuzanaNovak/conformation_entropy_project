@@ -3,4 +3,4 @@ Zde je mé řešení zadání projektu Confirmational Entropy, které zkoumá di
 # Program
 Program, který slouží ke spočítání počtu rotovatelných vazeb v jednotlivých molekulách, uložení výsledků do tabulek a následnému vytvoření histogramu, se nachází v souboru conformation_entropy_calculation.py.
 # Výsledky
-Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnující tabulka ve formátu .xlsx a .csv jsou k nalezení ve složce results.
+Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnující tabulka ve formátu .xlsx a .csv jsou k nalezení ve složce results. Dále zde lze nalézt shrnující tabulku s minimem a maximem rotovatelných vazeb v ligandech pro každý target protein.
