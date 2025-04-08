@@ -5,6 +5,7 @@ import pandas as pd
 
 ligand_folder = "ligands"
 rotatable_bonds = []
+not_found = []
 
 #rotatable bonds calculation
 for filename in os.listdir(ligand_folder):
@@ -29,8 +30,10 @@ for filename in os.listdir(ligand_folder):
                 })
             else:
                 print(f"{filename} error with this molecule")
+                not_found.append(filename)
     else:
         print(f"{filename} is not SDF")
+
 #saving results
 rotatable_bonds_df = pd.DataFrame(rotatable_bonds)
 rotatable_bonds_df = rotatable_bonds_df.sort_values(by=["target_protein", "ligand_pdb"])
@@ -38,6 +41,13 @@ rotatable_bonds_df = rotatable_bonds_df.reset_index(drop=True)
 print(rotatable_bonds_df)
 rotatable_bonds_df.to_csv("results/ligand_rotatable_bonds.csv", index=False)
 rotatable_bonds_df.to_excel("results/ligand_rotatable_bonds.xlsx", index=False)
+
+
+#min/max rotatable bonds for every protein
+min_max_df = rotatable_bonds_df.groupby("target_protein")["rotatable_bonds"].agg(["min", "max"]).reset_index()
+min_max_df.columns = ["target_protein", "min_rotatable_bonds", "max_rotatable_bonds"]
+min_max_df.to_csv("results/min_max_rotatable_bonds_per_protein.csv", index=False)
+print(min_max_df)
 
 #plotting
 import matplotlib.pyplot as plt

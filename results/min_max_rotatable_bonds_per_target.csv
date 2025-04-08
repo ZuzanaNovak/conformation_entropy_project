@@ -1,0 +1,11 @@
+target_protein,min_rotatable_bonds,max_rotatable_bonds
+001-CA2,1,5
+002-HIV-PR,9,20
+003-CK2,0,3
+004-AR,5,7
+005-Cath-D,2,4
+006-BACE1,5,16
+007-JAK1,1,4
+008-Trypsin,0,12
+009-CDK2,4,6
+010-MMP12,4,10
