@@ -46,10 +46,12 @@ rotatable_bonds_df.to_excel("results/ligand_rotatable_bonds.xlsx", index=False)
 #min/max rotatable bonds for every protein
 min_max_df = rotatable_bonds_df.groupby("target_protein")["rotatable_bonds"].agg(["min", "max"]).reset_index()
 min_max_df.columns = ["target_protein", "min_rotatable_bonds", "max_rotatable_bonds"]
+min_max_df["variability"] = min_max_df["max_rotatable_bonds"] - min_max_df["min_rotatable_bonds"]
 min_max_df.to_csv("results/min_max_rotatable_bonds_per_protein.csv", index=False)
 print(min_max_df)
 
 #plotting
+
 import matplotlib.pyplot as plt
 plt.figure(figsize=(8, 5))
 plt.hist(rotatable_bonds_df["rotatable_bonds"], bins=range(rotatable_bonds_df["rotatable_bonds"].max()+2), edgecolor='black', align='left')
