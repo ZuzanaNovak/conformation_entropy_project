@@ -15,7 +15,7 @@ Programy jsou k nalezení ve složce CREST/programs.
 Pro snadné spuštění programů ve správném pořadí slouží skript run_crest_analysis.sh v hlavní složce.
 #### extract_sconf
 Program který extrahuje konformační entropie všech ligandů JAK1.
-#### 007_JAK1_other_information
+#### other_information
 Program získává další informace o ligandech zájmu. Jde o: molekulovou hmotnost, množství těžkých atomů, množství donorů/akceptorů vodíku.
 ####  plotting_and_correlation
 Program, který pro každou z výše zmíněných metrik + z předchozí části úkolu již známé množství rotovatelných vazeb provádí korelační analýzy a plotuje vztah mezi těmito metrikami a konformační entropií.
