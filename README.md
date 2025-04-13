@@ -5,7 +5,7 @@ Zde je mé řešení první části zadání projektu Confirmational Entropy, kt
 ## Program
 Program, který slouží ke spočítání počtu rotovatelných vazeb v jednotlivých molekulách, uložení výsledků do tabulek a následnému vytvoření histogramu, se nachází v souboru conformation_entropy_calculation.py.
 ## Výsledky
-Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnující tabulka ve formátu .xlsx a .csv jsou k nalezení ve složce results. Dále zde lze nalézt shrnující tabulku s minimem a maximem rotovatelných vazeb v ligandech pro každý target protein.
+Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnující tabulka ve formátu .xlsx a .csv jsou k nalezení ve složce rotatable_bonds/results. Dále zde lze nalézt shrnující tabulku s minimem a maximem rotovatelných vazeb v ligandech pro každý target protein.
 
 # Druhá část projektu - analýza CREST
 složka: CREST
@@ -21,5 +21,5 @@ Program, který pro každou z výše zmíněných metrik + z předchozí části
 
 
 ## Výsledky
-Výsledky jsou k nalezení ve složce results. V podsložce plot jsou uloženy grafy závislostí jednotlivých metrik s konformační entropií. V podsložce tables je tabulka všech metrik pro každý ligand a také tabulka výsledků korelačních testů pro každou metriku všetně p-value.
+Výsledky jsou k nalezení ve složce CREST/results. V podsložce plot jsou uloženy grafy závislostí jednotlivých metrik s konformační entropií. V podsložce tables je tabulka všech metrik pro každý ligand a také tabulka výsledků korelačních testů pro každou metriku všetně p-value.
 
