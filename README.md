@@ -16,7 +16,7 @@ Pro snadné spuštění programů ve správném pořadí slouží skript run_cre
 #### extract_sconf
 Program který extrahuje konformační entropie všech ligandů JAK1.
 #### other_information
-Program získává další informace o ligandech zájmu. Jde o: molekulovou hmotnost, množství těžkých atomů, množství donorů/akceptorů vodíku.
+Program získává další informace o ligandech zájmu. Jde o: molekulovou hmotnost, množství těžkých atomů, množství donorů/akceptorů vodíkových můstků.
 ####  plotting_and_correlation
 Program, který pro každou z výše zmíněných metrik + z předchozí části úkolu již známé množství rotovatelných vazeb provádí korelační analýzy a plotuje vztah mezi těmito metrikami a konformační entropií.
 
