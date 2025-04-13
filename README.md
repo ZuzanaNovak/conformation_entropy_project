@@ -11,6 +11,7 @@ Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnují
 složka: CREST
 ## Programy
 Programy jsou k nalezení ve složce CREST/programs. 
+###
 Pro snadné spuštění programů ve správném pořadí slouží skript run_crest_analysis.sh v hlavní složce.
 #### extract_sconf
 Program který extrahuje konformační entropie všech ligandů JAK1.
