@@ -6,7 +6,7 @@ python CREST/programs/extract_sconf.py
 
 echo
 echo "Computing other molecular information"
-python CREST/programs/007_JAK1_other_informations.py
+python CREST/programs/other_informations.py
 
 echo
 echo "Plotting and correlation analysis"
