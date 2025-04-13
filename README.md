@@ -1,5 +1,5 @@
 # První část projektu
-
+Složka : rotatable_bonds
 ## Řešení Confirmational Entropy
 Zde je mé řešení první části zadání projektu Confirmational Entropy, které zkoumá distribuci rotovatelných vazeb v ligandech z protein-ligand komplexů z PL-REX datasetu.
 ## Program
@@ -8,7 +8,7 @@ Program, který slouží ke spočítání počtu rotovatelných vazeb v jednotli
 Výsledky, tedy histogram distribuce rotovatelných vazeb v ligandech a shrnující tabulka ve formátu .xlsx a .csv jsou k nalezení ve složce results. Dále zde lze nalézt shrnující tabulku s minimem a maximem rotovatelných vazeb v ligandech pro každý target protein.
 
 # Druhá část projektu - analýza CREST
-
+složka: CREST
 ## Programy
 Programy jsou k nalezení ve složce CREST/programs. 
 Pro snadné spuštění programů ve správném pořadí slouží skript run_crest_analysis.sh v hlavní složce.
