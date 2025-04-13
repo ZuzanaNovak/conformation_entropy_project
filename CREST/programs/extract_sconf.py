@@ -1,7 +1,6 @@
 import os
 import re
 import pandas as pd
-# File paths
 input_csv = "rotatable_bonds/results/ligand_rotatable_bonds.csv"
 filtered_csv = "CREST/results/tables/007_JAK1_rotatable_bonds.csv"
 crest_directory = "CREST/CREST_on_007-JAK1"
