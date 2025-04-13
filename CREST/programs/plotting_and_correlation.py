@@ -5,7 +5,7 @@ from scipy.stats import pearsonr, spearmanr
 
 df = pd.read_csv("CREST/results/tables/007_JAK1_rotatable_bonds.csv")
 
-# Updated metrics list
+
 metrics = [
     "rotatable_bonds",
     "num_heavy_atoms",
