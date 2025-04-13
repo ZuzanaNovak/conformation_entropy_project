@@ -6,22 +6,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import pearsonr, spearmanr
 
-
-sdf_folder = "ligands" 
+sdf_folder = "ligands"
 csv_path = "CREST/results/tables/007_JAK1_rotatable_bonds.csv"
 
 df = pd.read_csv(csv_path)
 
-
 def analyze_molecule(mol):
     Chem.SanitizeMol(mol)
-    
-    # rings
-    ssr = Chem.GetSymmSSSR(mol)
-    num_rings = len(ssr)
-    num_aromatic_rings = len([r for r in ssr if all(mol.GetAtomWithIdx(i).GetIsAromatic() for i in r)])
 
-    # size
+    # Size
     num_heavy_atoms = mol.GetNumHeavyAtoms()
     mol_weight = Descriptors.MolWt(mol)
 
@@ -32,9 +25,7 @@ def analyze_molecule(mol):
     num_HBD = rdMolDescriptors.CalcNumHBD(mol)
     num_HBA = rdMolDescriptors.CalcNumHBA(mol)
 
-    return num_rings, num_aromatic_rings, num_heavy_atoms, mol_weight, num_HBD, num_HBA
-
-
+    return num_heavy_atoms, mol_weight, num_HBD, num_HBA
 
 results = []
 
@@ -52,24 +43,14 @@ for fname in os.listdir(sdf_folder):
     ligand_id = fname.split("__")[-1].replace(".sdf", "")
     props = analyze_molecule(mol)
 
-
-
     results.append({
         "ligand_pdb": ligand_id,
-        "num_rings": props[0],
-        "num_aromatic_rings": props[1],
-        "num_heavy_atoms": props[2],
-        "mol_weight": props[3],
-        "num_HBD": props[4],
-        "num_HBA": props[5],
+        "num_heavy_atoms": props[0],
+        "mol_weight": props[1],
+        "num_HBD": props[2],
+        "num_HBA": props[3],
     })
-
-
 
 df_props = pd.DataFrame(results)
 df_merged = df.merge(df_props, on="ligand_pdb", how="left")
-
-
 df_merged.to_csv(csv_path, index=False)
-
-

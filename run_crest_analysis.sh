@@ -9,7 +9,7 @@ echo "Computing other molecular information"
 python CREST/programs/007_JAK1_other_informations.py
 
 echo
-echo "Step 3: Plotting and correlation analysis"
+echo "Plotting and correlation analysis"
 python CREST/programs/plotting_and_correlation.py
 
 echo
