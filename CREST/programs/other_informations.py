@@ -19,6 +19,7 @@ def analyze_molecule(mol):
     mol_weight = Descriptors.MolWt(mol)
 
     # H-bond donors and acceptors
+    #actually wasnt needed to add hydrogens, they were explicit in the sdf but I forgot to check that...
     mol = Chem.AddHs(mol)
     AllChem.EmbedMolecule(mol, AllChem.ETKDG())
     AllChem.UFFOptimizeMolecule(mol)
